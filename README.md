@@ -1,5 +1,7 @@
 # rxjs-Angular2-DefinitelyTyped, version beta.9.
 
+### angular 2 development **without NPM**
+
 rxjs-angular.d.ts:  Typescript definition for rxjs and angular 2
 
 
