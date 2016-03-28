@@ -1,6 +1,7 @@
 
 declare module "react-mdl" {
   import * as React from 'react';
+  type Component = string | Function | React.ReactElement<any>;
 
 
   //---------- Badge
@@ -17,6 +18,7 @@ declare module "react-mdl" {
     accent?: boolean;
     className?: string;
     colored?: boolean;
+    component?: Component;
     href?: string;
     primary?: boolean;
     raised?: boolean;
@@ -75,6 +77,7 @@ declare module "react-mdl" {
     align?: 'top' | 'middle' | 'bottom' | 'stretch';
     className?: string;
     col: number;
+    component?: Component;
     phone?: number;
     tablet?: number;
     hideDesktop?: boolean;
@@ -100,6 +103,7 @@ declare module "react-mdl" {
   //---------- Content
   export interface ContentProps extends React.Props<Content> {
     className?: string;
+    component?: Component;
   }
   export class Content extends React.Component<ContentProps, {}> { }
 
@@ -131,6 +135,7 @@ declare module "react-mdl" {
   //---------- DialogTitle
   export interface DialogTitleProps extends React.Props<DialogTitle> {
     className?: string;
+    component?: Component;
   }
   export class DialogTitle extends React.Component<DialogTitleProps, {}> { }
 
@@ -189,6 +194,7 @@ declare module "react-mdl" {
   //---------- Grid
   export interface GridProps extends React.Props<Grid> {
     className?: string;
+    component?: Component;
     noSpacing?: boolean;
     shadow?: number;
   }
@@ -411,6 +417,7 @@ declare module "react-mdl" {
   export interface TabProps extends React.Props<Tab> {
     active?: boolean;
     className?: string;
+    component?: Component;
     cssPrefix?: string;
     onTabClick?: (tabId: string) => void;
     style?: {};
@@ -439,7 +446,7 @@ declare module "react-mdl" {
 
   //---------- TableHeader
   export interface TableHeaderProps extends React.Props<TableHeader> {
-    cellFormatter?: (val:string, row: any, rowIndex:number) => string;
+    cellFormatter?: (val: string, row: any, rowIndex: number) => string;
     className?: string;
     name: string;
     numeric?: boolean;
