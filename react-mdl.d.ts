@@ -2,10 +2,12 @@
 declare module "react-mdl" {
   import * as React from 'react';
   type Component = string | Function | React.ReactElement<any>;
+  type Children = string | Element;
 
 
   //---------- Badge
   export interface BadgeProps {
+    children?: Children;
     text?: string | number;
     overlap?: boolean;
     noBackground?: boolean;
@@ -288,6 +290,7 @@ declare module "react-mdl" {
 
   //---------- ListItemAction
   export interface ListItemActionProps {
+    children?: Children;
     className?: string;
     info?: string;
   }
@@ -356,6 +359,7 @@ declare module "react-mdl" {
   //---------- RadioGroup
   export interface RadioGroupProps {
     childContainer?: string;
+    children?: Children;
     container?: string;
     name: string;
     onChange?: (ev:Event) => void;
@@ -461,6 +465,7 @@ declare module "react-mdl" {
   //---------- Tabs
   export interface TabsProps {
     activeTab?: number;
+    children?: Children;
     className?: string;
     onChange?: (tabId:string) => void;
     ripple?: boolean;
@@ -493,6 +498,7 @@ declare module "react-mdl" {
 
   //---------- Tooltip
   export interface TooltipProps {
+    children: Children;
     label: React.ReactElement<any>;
     large?: boolean;
     position?: 'left' | 'right' | 'top' | 'bottom';
