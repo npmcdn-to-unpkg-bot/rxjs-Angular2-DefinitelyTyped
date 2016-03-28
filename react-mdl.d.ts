@@ -5,7 +5,7 @@ declare module "react-mdl" {
 
 
   //---------- Badge
-  export interface BadgeProps extends React.Props<Badge> {
+  export interface BadgeProps {
     text?: string | number;
     overlap?: boolean;
     noBackground?: boolean;
@@ -14,7 +14,7 @@ declare module "react-mdl" {
 
 
   //---------- Button
-  export interface ButtonProps extends React.Props<Button> {
+  export interface ButtonProps {
     accent?: boolean;
     className?: string;
     colored?: boolean;
@@ -28,7 +28,7 @@ declare module "react-mdl" {
 
 
   //---------- Card
-  export interface CardProps extends React.Props<Card> {
+  export interface CardProps {
     className?: string;
     shadow?: number;
   }
@@ -36,7 +36,7 @@ declare module "react-mdl" {
 
 
   //---------- CardActions
-  export interface CardActionsProps extends React.Props<CardActions> {
+  export interface CardActionsProps {
     border?: boolean;
     className?: string;
   }
@@ -44,28 +44,28 @@ declare module "react-mdl" {
 
 
   //---------- CardMedia
-  export interface CardMediaProps extends React.Props<CardMedia> {
+  export interface CardMediaProps {
     className?: string;
   }
   export class CardMedia extends React.Component<CardMediaProps, {}> { }
 
 
   //---------- CardMenu
-  export interface CardMenuProps extends React.Props<CardMenu> {
+  export interface CardMenuProps {
     className?: string;
   }
   export class CardMenu extends React.Component<CardMenuProps, {}> { }
 
 
   //---------- CardText
-  export interface CardTextProps extends React.Props<CardText> {
+  export interface CardTextProps {
     className?: string;
   }
   export class CardText extends React.Component<CardTextProps, {}> { }
 
 
   //---------- CardTitle
-  export interface CardTitleProps extends React.Props<CardTitle> {
+  export interface CardTitleProps {
     className?: string;
     expand?: boolean;
   }
@@ -73,7 +73,7 @@ declare module "react-mdl" {
 
 
   //---------- Cell
-  export interface CellProps extends React.Props<Cell> {
+  export interface CellProps {
     align?: 'top' | 'middle' | 'bottom' | 'stretch';
     className?: string;
     col: number;
@@ -89,19 +89,19 @@ declare module "react-mdl" {
 
 
   //---------- Checkbox
-  export interface CheckboxProps extends React.Props<Checkbox> {
+  export interface CheckboxProps {
     checked?: boolean;
     className?: string;
     disabled?: boolean;
     label?: string;
-    onChange?: (ev: Event) => void;
+    onChange?: (ev:Event) => void;
     ripple?: boolean;
   }
   export class Checkbox extends React.Component<CheckboxProps, {}> { }
 
 
   //---------- Content
-  export interface ContentProps extends React.Props<Content> {
+  export interface ContentProps {
     className?: string;
     component?: Component;
   }
@@ -109,7 +109,7 @@ declare module "react-mdl" {
 
 
   //---------- Dialog
-  export interface DialogProps extends React.Props<Dialog> {
+  export interface DialogProps {
     className?: string;
     onCancel?: () => void;
     open?: boolean;
@@ -118,7 +118,7 @@ declare module "react-mdl" {
 
 
   //---------- DialogActions
-  export interface DialogActionsProps extends React.Props<DialogActions> {
+  export interface DialogActionsProps {
     className?: string;
     fullWidth?: boolean;
   }
@@ -126,14 +126,14 @@ declare module "react-mdl" {
 
 
   //---------- DialogContent
-  export interface DialogContentProps extends React.Props<DialogContent> {
+  export interface DialogContentProps {
     className?: string;
   }
   export class DialogContent extends React.Component<DialogContentProps, {}> { }
 
 
   //---------- DialogTitle
-  export interface DialogTitleProps extends React.Props<DialogTitle> {
+  export interface DialogTitleProps {
     className?: string;
     component?: Component;
   }
@@ -141,7 +141,7 @@ declare module "react-mdl" {
 
 
   //---------- Drawer
-  export interface DrawerProps extends React.Props<Drawer> {
+  export interface DrawerProps {
     className?: string;
     title?: React.ReactElement<any>;
   }
@@ -149,7 +149,7 @@ declare module "react-mdl" {
 
 
   //---------- FABButton
-  export interface FABButtonProps extends React.Props<FABButton> {
+  export interface FABButtonProps {
     className?: string;
     mini?: boolean;
   }
@@ -157,7 +157,7 @@ declare module "react-mdl" {
 
 
   //---------- Footer
-  export interface FooterProps extends React.Props<Footer> {
+  export interface FooterProps {
     className?: string;
     size?: 'mini' | 'mega';
   }
@@ -165,7 +165,7 @@ declare module "react-mdl" {
 
 
   //---------- FooterDropDownSection
-  export interface FooterDropDownSectionProps extends React.Props<FooterDropDownSection> {
+  export interface FooterDropDownSectionProps {
     className?: string;
     size?: 'mini' | 'mega';
     title: React.ReactElement<any>;
@@ -174,7 +174,7 @@ declare module "react-mdl" {
 
 
   //---------- FooterLinkList
-  export interface FooterLinkListProps extends React.Props<FooterLinkList> {
+  export interface FooterLinkListProps {
     className?: string;
     size?: 'mini' | 'mega';
   }
@@ -182,7 +182,7 @@ declare module "react-mdl" {
 
 
   //---------- FooterSection
-  export interface FooterSectionProps extends React.Props<FooterSection> {
+  export interface FooterSectionProps {
     className?: string;
     logo?: React.ReactElement<any>;
     size?: 'mini' | 'mega';
@@ -192,7 +192,7 @@ declare module "react-mdl" {
 
 
   //---------- Grid
-  export interface GridProps extends React.Props<Grid> {
+  export interface GridProps {
     className?: string;
     component?: Component;
     noSpacing?: boolean;
@@ -202,7 +202,7 @@ declare module "react-mdl" {
 
 
   //---------- Header
-  export interface HeaderProps extends React.Props<Header> {
+  export interface HeaderProps {
     className?: string;
     scroll?: boolean;
     seamed?: boolean;
@@ -215,7 +215,7 @@ declare module "react-mdl" {
 
 
   //---------- HeaderRow
-  export interface HeaderRowProps extends React.Props<HeaderRow> {
+  export interface HeaderRowProps {
     className?: string;
     title?: React.ReactElement<any>;
   }
@@ -223,17 +223,17 @@ declare module "react-mdl" {
 
 
   //---------- HeaderTabs
-  export interface HeaderTabsProps extends React.Props<HeaderTabs> {
+  export interface HeaderTabsProps {
     activeTab?: number;
     className?: string;
-    onChange?: (tabId: string) => void;
+    onChange?: (tabId:string) => void;
     ripple?: boolean;
   }
   export class HeaderTabs extends React.Component<HeaderTabsProps, {}> { }
 
 
   //---------- Icon
-  export interface IconProps extends React.Props<Icon> {
+  export interface IconProps {
     className?: string;
     name: string;
   }
@@ -241,7 +241,7 @@ declare module "react-mdl" {
 
 
   //---------- IconButton
-  export interface IconButtonProps extends React.Props<IconButton> {
+  export interface IconButtonProps {
     className?: string;
     name: string;
   }
@@ -249,19 +249,19 @@ declare module "react-mdl" {
 
 
   //---------- IconToggle
-  export interface IconToggleProps extends React.Props<IconToggle> {
+  export interface IconToggleProps {
     checked?: boolean;
     className?: string;
     disabled?: boolean;
     name: string;
-    onChange?: (ev: Event) => void;
+    onChange?: (ev:Event) => void;
     ripple?: boolean;
   }
   export class IconToggle extends React.Component<IconToggleProps, {}> { }
 
 
   //---------- Layout
-  export interface LayoutProps extends React.Props<Layout> {
+  export interface LayoutProps {
     className?: string;
     fixedDrawer?: boolean;
     fixedHeader?: boolean;
@@ -271,14 +271,14 @@ declare module "react-mdl" {
 
 
   //---------- List
-  export interface ListProps extends React.Props<List> {
+  export interface ListProps {
     className?: string;
   }
   export class List extends React.Component<ListProps, {}> { }
 
 
   //---------- ListItem
-  export interface ListItemProps extends React.Props<ListItem> {
+  export interface ListItemProps {
     className?: string;
     twoLine?: boolean;
     threeLine?: boolean;
@@ -287,7 +287,7 @@ declare module "react-mdl" {
 
 
   //---------- ListItemAction
-  export interface ListItemActionProps extends React.Props<ListItemAction> {
+  export interface ListItemActionProps {
     className?: string;
     info?: string;
   }
@@ -295,7 +295,7 @@ declare module "react-mdl" {
 
 
   //---------- ListItemContent
-  export interface ListItemContentProps extends React.Props<ListItemContent> {
+  export interface ListItemContentProps {
     avatar?: string;
     className?: string;
     icon?: string;
@@ -306,7 +306,7 @@ declare module "react-mdl" {
 
 
   //---------- Menu
-  export interface MenuProps extends React.Props<Menu> {
+  export interface MenuProps {
     align?: 'left' | 'right';
     className?: string;
     ripple?: boolean;
@@ -317,21 +317,21 @@ declare module "react-mdl" {
 
 
   //---------- MenuItem
-  export interface MenuItemProps extends React.Props<MenuItem> {
+  export interface MenuItemProps {
     className?: string;
   }
   export class MenuItem extends React.Component<MenuItemProps, {}> { }
 
 
   //---------- Navigation
-  export interface NavigationProps extends React.Props<Navigation> {
+  export interface NavigationProps {
     className?: string;
   }
   export class Navigation extends React.Component<NavigationProps, {}> { }
 
 
   //---------- ProgressBar
-  export interface ProgressBarProps extends React.Props<ProgressBar> {
+  export interface ProgressBarProps {
     buffer?: number;
     className?: string;
     indeterminate?: boolean;
@@ -341,12 +341,12 @@ declare module "react-mdl" {
 
 
   //---------- Radio
-  export interface RadioProps extends React.Props<Radio> {
+  export interface RadioProps {
     checked?: boolean;
     className?: string;
     disabled?: boolean;
     name?: string;
-    onChange?: (ev: Event) => void;
+    onChange?: (ev:Event) => void;
     ripple?: boolean;
     value: string | number;
   }
@@ -354,33 +354,33 @@ declare module "react-mdl" {
 
 
   //---------- RadioGroup
-  export interface RadioGroupProps extends React.Props<RadioGroup> {
+  export interface RadioGroupProps {
     childContainer?: string;
     container?: string;
     name: string;
-    onChange?: (ev: Event) => void;
+    onChange?: (ev:Event) => void;
     value: string | number;
   }
   export class RadioGroup extends React.Component<RadioGroupProps, {}> { }
 
 
   //---------- Slider
-  export interface SliderProps extends React.Props<Slider> {
+  export interface SliderProps {
     className?: string;
     max?: number;
     min?: number;
-    onChange?: (ev: Event) => void;
+    onChange?: (ev:Event) => void;
     value?: number;
   }
   export class Slider extends React.Component<SliderProps, {}> { }
 
 
   //---------- Snackbar
-  export interface SnackbarProps extends React.Props<Snackbar> {
+  export interface SnackbarProps {
     action?: string;
     active: boolean;
     className?: string;
-    onActionClick?: (ev: Event) => void;
+    onActionClick?: (ev:Event) => void;
     onTimeout: () => void;
     timeout?: number;
   }
@@ -388,14 +388,14 @@ declare module "react-mdl" {
 
 
   //---------- Spacer
-  export interface SpacerProps extends React.Props<Spacer> {
+  export interface SpacerProps {
     className?: string;
   }
   export class Spacer extends React.Component<SpacerProps, {}> { }
 
 
   //---------- Spinner
-  export interface SpinnerProps extends React.Props<Spinner> {
+  export interface SpinnerProps {
     className?: string;
     singleColor?: boolean;
   }
@@ -403,23 +403,23 @@ declare module "react-mdl" {
 
 
   //---------- Switch
-  export interface SwitchProps extends React.Props<Switch> {
+  export interface SwitchProps {
     checked?: boolean;
     className?: string;
     disabled?: boolean;
-    onChange?: (ev: Event) => void;
+    onChange?: (ev:Event) => void;
     ripple?: boolean;
   }
   export class Switch extends React.Component<SwitchProps, {}> { }
 
 
   //---------- Tab
-  export interface TabProps extends React.Props<Tab> {
+  export interface TabProps {
     active?: boolean;
     className?: string;
     component?: Component;
     cssPrefix?: string;
-    onTabClick?: (tabId: string) => void;
+    onTabClick?: (tabId:string) => void;
     style?: {};
     tabId?: number;
   }
@@ -427,17 +427,17 @@ declare module "react-mdl" {
 
 
   //---------- TabBar
-  export interface TabBarProps extends React.Props<TabBar> {
+  export interface TabBarProps {
     activeTab?: number;
     className?: string;
     cssPrefix: string;
-    onChange?: (tabId: string) => void;
+    onChange?: (tabId:string) => void;
   }
   export class TabBar extends React.Component<TabBarProps, {}> { }
 
 
   //---------- Table
-  export interface TableProps extends React.Props<Table> {
+  export interface TableProps {
     rows: Array<{}>;
     sortable?: boolean;
   }
@@ -445,24 +445,24 @@ declare module "react-mdl" {
 
 
   //---------- TableHeader
-  export interface TableHeaderProps extends React.Props<TableHeader> {
-    cellFormatter?: (val: string, row: any, rowIndex: number) => string;
+  export interface TableHeaderProps {
+    cellFormatter?: (val:string, row: any, rowIndex:number) => string;
     className?: string;
     name: string;
     numeric?: boolean;
-    onClick?: (ev: Event, tabId: string) => void;
+    onClick?: (ev:Event, tabId:string) => void;
     nosort?: boolean;
-    sortFn?: (a: string, b: string, isAsc: boolean) => number;
+    sortFn?: (a:string, b:string, isAsc:boolean) => number;
     tooltip?: React.ReactElement<any>;
   }
   export class TableHeader extends React.Component<TableHeaderProps, {}> { }
 
 
   //---------- Tabs
-  export interface TabsProps extends React.Props<Tabs> {
+  export interface TabsProps {
     activeTab?: number;
     className?: string;
-    onChange?: (tabId: string) => void;
+    onChange?: (tabId:string) => void;
     ripple?: boolean;
     tabBarProps?: {};
   }
@@ -470,7 +470,7 @@ declare module "react-mdl" {
 
 
   //---------- Textfield
-  export interface TextfieldProps extends React.Props<Textfield> {
+  export interface TextfieldProps {
     className?: string;
     disabled?: boolean;
     error?: React.ReactElement<any>;
@@ -481,7 +481,7 @@ declare module "react-mdl" {
     inputClassName?: string;
     label: string;
     maxRows?: number;
-    onChange?: (ev: Event) => void;
+    onChange?: (ev:Event) => void;
     pattern?: string;
     required?: boolean;
     rows?: number;
@@ -492,7 +492,7 @@ declare module "react-mdl" {
 
 
   //---------- Tooltip
-  export interface TooltipProps extends React.Props<Tooltip> {
+  export interface TooltipProps {
     label: React.ReactElement<any>;
     large?: boolean;
     position?: 'left' | 'right' | 'top' | 'bottom';
