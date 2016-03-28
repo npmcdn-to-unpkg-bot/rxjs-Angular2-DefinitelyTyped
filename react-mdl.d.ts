@@ -439,7 +439,7 @@ declare module "react-mdl" {
 
   //---------- TableHeader
   export interface TableHeaderProps extends React.Props<TableHeader> {
-    cellFormatter?: (val: string) => string;
+    cellFormatter?: (val:string, row: any, rowIndex:number) => string;
     className?: string;
     name: string;
     numeric?: boolean;
