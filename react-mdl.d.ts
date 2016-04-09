@@ -517,7 +517,8 @@ declare module "react-mdl" {
   }
   export class Tooltip extends React.Component<TooltipProps, {}> { }
 
-  //There is a collision in react-mdl x HTMLAttributes,DOMAttributes atributes. So I removed those atributes from React definition: onChange, label, size, title, value, rows.
+  //There is a collision in react-mdl x React.HTML&DOM atributes. 
+  //So I removed those atributes from React definition and leave them in correct MDL form: onChange, label, size, title, value, rows
   interface DOMAttributes {
     children?: React.ReactNode;
     dangerouslySetInnerHTML?: {
