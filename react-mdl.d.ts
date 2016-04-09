@@ -4,259 +4,6 @@ declare module "react-mdl" {
   type Component = string | Function | React.ReactElement<any>;
   type Children = string | Element;
 
-
-  //There is a collision in react-mdl x HTMLAttributes,DOMAttributes atributes. So I removed those atributes (onChange, label, size, title, value, rows) from following React definition:
-  interface DOMAttributes {
-    children?: React.ReactNode;
-    dangerouslySetInnerHTML?: {
-      __html: string;
-    };
-
-    // Clipboard Events
-    onCopy?: React.ClipboardEventHandler;
-    onCut?: React.ClipboardEventHandler;
-    onPaste?: React.ClipboardEventHandler;
-
-    // Composition Events
-    onCompositionEnd?: React.CompositionEventHandler;
-    onCompositionStart?: React.CompositionEventHandler;
-    onCompositionUpdate?: React.CompositionEventHandler;
-
-    // Focus Events
-    onFocus?: React.FocusEventHandler;
-    onBlur?: React.FocusEventHandler;
-
-    // Form Events
-    //onChange?: React.FormEventHandler;
-    onInput?: React.FormEventHandler;
-    onSubmit?: React.FormEventHandler;
-
-    // Image Events
-    onLoad?: React.ReactEventHandler;
-    onError?: React.ReactEventHandler; // also a Media Event
-
-    // Keyboard Events
-    onKeyDown?: React.KeyboardEventHandler;
-    onKeyPress?: React.KeyboardEventHandler;
-    onKeyUp?: React.KeyboardEventHandler;
-
-    // Media Events
-    onAbort?: React.ReactEventHandler;
-    onCanPlay?: React.ReactEventHandler;
-    onCanPlayThrough?: React.ReactEventHandler;
-    onDurationChange?: React.ReactEventHandler;
-    onEmptied?: React.ReactEventHandler;
-    onEncrypted?: React.ReactEventHandler;
-    onEnded?: React.ReactEventHandler;
-    onLoadedData?: React.ReactEventHandler;
-    onLoadedMetadata?: React.ReactEventHandler;
-    onLoadStart?: React.ReactEventHandler;
-    onPause?: React.ReactEventHandler;
-    onPlay?: React.ReactEventHandler;
-    onPlaying?: React.ReactEventHandler;
-    onProgress?: React.ReactEventHandler;
-    onRateChange?: React.ReactEventHandler;
-    onSeeked?: React.ReactEventHandler;
-    onSeeking?: React.ReactEventHandler;
-    onStalled?: React.ReactEventHandler;
-    onSuspend?: React.ReactEventHandler;
-    onTimeUpdate?: React.ReactEventHandler;
-    onVolumeChange?: React.ReactEventHandler;
-    onWaiting?: React.ReactEventHandler;
-
-    // MouseEvents
-    onClick?: React.MouseEventHandler;
-    onContextMenu?: React.MouseEventHandler;
-    onDoubleClick?: React.MouseEventHandler;
-    onDrag?: React.DragEventHandler;
-    onDragEnd?: React.DragEventHandler;
-    onDragEnter?: React.DragEventHandler;
-    onDragExit?: React.DragEventHandler;
-    onDragLeave?: React.DragEventHandler;
-    onDragOver?: React.DragEventHandler;
-    onDragStart?: React.DragEventHandler;
-    onDrop?: React.DragEventHandler;
-    onMouseDown?: React.MouseEventHandler;
-    onMouseEnter?: React.MouseEventHandler;
-    onMouseLeave?: React.MouseEventHandler;
-    onMouseMove?: React.MouseEventHandler;
-    onMouseOut?: React.MouseEventHandler;
-    onMouseOver?: React.MouseEventHandler;
-    onMouseUp?: React.MouseEventHandler;
-
-    // Selection Events
-    onSelect?: React.ReactEventHandler;
-
-    // Touch Events
-    onTouchCancel?: React.TouchEventHandler;
-    onTouchEnd?: React.TouchEventHandler;
-    onTouchMove?: React.TouchEventHandler;
-    onTouchStart?: React.TouchEventHandler;
-
-    // UI Events
-    onScroll?: React.UIEventHandler;
-
-    // Wheel Events
-    onWheel?: React.WheelEventHandler;
-  }
-
-  interface HTMLAttributes extends DOMAttributes {
-    // React-specific Attributes
-    defaultChecked?: boolean;
-    defaultValue?: string | string[];
-
-    // Standard HTML Attributes
-    accept?: string;
-    acceptCharset?: string;
-    accessKey?: string;
-    action?: string;
-    allowFullScreen?: boolean;
-    allowTransparency?: boolean;
-    alt?: string;
-    async?: boolean;
-    autoComplete?: string;
-    autoFocus?: boolean;
-    autoPlay?: boolean;
-    capture?: boolean;
-    cellPadding?: number | string;
-    cellSpacing?: number | string;
-    charSet?: string;
-    challenge?: string;
-    checked?: boolean;
-    classID?: string;
-    className?: string;
-    cols?: number;
-    colSpan?: number;
-    content?: string;
-    contentEditable?: boolean;
-    contextMenu?: string;
-    controls?: boolean;
-    coords?: string;
-    crossOrigin?: string;
-    data?: string;
-    dateTime?: string;
-    default?: boolean;
-    defer?: boolean;
-    dir?: string;
-    disabled?: boolean;
-    download?: any;
-    draggable?: boolean;
-    encType?: string;
-    form?: string;
-    formAction?: string;
-    formEncType?: string;
-    formMethod?: string;
-    formNoValidate?: boolean;
-    formTarget?: string;
-    frameBorder?: number | string;
-    headers?: string;
-    height?: number | string;
-    hidden?: boolean;
-    high?: number;
-    href?: string;
-    hrefLang?: string;
-    htmlFor?: string;
-    httpEquiv?: string;
-    icon?: string;
-    id?: string;
-    inputMode?: string;
-    integrity?: string;
-    is?: string;
-    keyParams?: string;
-    keyType?: string;
-    kind?: string;
-    //label?: string;
-    lang?: string;
-    list?: string;
-    loop?: boolean;
-    low?: number;
-    manifest?: string;
-    marginHeight?: number;
-    marginWidth?: number;
-    max?: number | string;
-    maxLength?: number;
-    media?: string;
-    mediaGroup?: string;
-    method?: string;
-    min?: number | string;
-    minLength?: number;
-    multiple?: boolean;
-    muted?: boolean;
-    name?: string;
-    nonce?: string;
-    noValidate?: boolean;
-    open?: boolean;
-    optimum?: number;
-    pattern?: string;
-    placeholder?: string;
-    poster?: string;
-    preload?: string;
-    radioGroup?: string;
-    readOnly?: boolean;
-    rel?: string;
-    required?: boolean;
-    reversed?: boolean;
-    role?: string;
-    //rows?: number;
-    rowSpan?: number;
-    sandbox?: string;
-    scope?: string;
-    scoped?: boolean;
-    scrolling?: string;
-    seamless?: boolean;
-    selected?: boolean;
-    shape?: string;
-    //size?: number;
-    sizes?: string;
-    span?: number;
-    spellCheck?: boolean;
-    src?: string;
-    srcDoc?: string;
-    srcLang?: string;
-    srcSet?: string;
-    start?: number;
-    step?: number | string;
-    style?: React.CSSProperties;
-    summary?: string;
-    tabIndex?: number;
-    target?: string;
-    //title?: string;
-    type?: string;
-    useMap?: string;
-    //value?: string | string[];
-    width?: number | string;
-    wmode?: string;
-    wrap?: string;
-
-    // RDFa Attributes
-    about?: string;
-    datatype?: string;
-    inlist?: any;
-    prefix?: string;
-    property?: string;
-    resource?: string;
-    typeof?: string;
-    vocab?: string;
-
-    // Non-standard Attributes
-    autoCapitalize?: string;
-    autoCorrect?: string;
-    autoSave?: string;
-    color?: string;
-    itemProp?: string;
-    itemScope?: boolean;
-    itemType?: string;
-    itemID?: string;
-    itemRef?: string;
-    results?: number;
-    security?: string;
-    unselectable?: boolean;
-
-    // Allows aria- and data- Attributes
-    [key: string]: any;
-  }
-
-
   //---------- Badge
   export interface BadgeProps extends HTMLAttributes {
     children?: Children;
@@ -769,5 +516,256 @@ declare module "react-mdl" {
     position?: 'left' | 'right' | 'top' | 'bottom';
   }
   export class Tooltip extends React.Component<TooltipProps, {}> { }
+
+  //There is a collision in react-mdl x HTMLAttributes,DOMAttributes atributes. So I removed those atributes from React definition: onChange, label, size, title, value, rows.
+  interface DOMAttributes {
+    children?: React.ReactNode;
+    dangerouslySetInnerHTML?: {
+      __html: string;
+    };
+
+    // Clipboard Events
+    onCopy?: React.ClipboardEventHandler;
+    onCut?: React.ClipboardEventHandler;
+    onPaste?: React.ClipboardEventHandler;
+
+    // Composition Events
+    onCompositionEnd?: React.CompositionEventHandler;
+    onCompositionStart?: React.CompositionEventHandler;
+    onCompositionUpdate?: React.CompositionEventHandler;
+
+    // Focus Events
+    onFocus?: React.FocusEventHandler;
+    onBlur?: React.FocusEventHandler;
+
+    // Form Events
+    //onChange?: React.FormEventHandler;
+    onInput?: React.FormEventHandler;
+    onSubmit?: React.FormEventHandler;
+
+    // Image Events
+    onLoad?: React.ReactEventHandler;
+    onError?: React.ReactEventHandler; // also a Media Event
+
+    // Keyboard Events
+    onKeyDown?: React.KeyboardEventHandler;
+    onKeyPress?: React.KeyboardEventHandler;
+    onKeyUp?: React.KeyboardEventHandler;
+
+    // Media Events
+    onAbort?: React.ReactEventHandler;
+    onCanPlay?: React.ReactEventHandler;
+    onCanPlayThrough?: React.ReactEventHandler;
+    onDurationChange?: React.ReactEventHandler;
+    onEmptied?: React.ReactEventHandler;
+    onEncrypted?: React.ReactEventHandler;
+    onEnded?: React.ReactEventHandler;
+    onLoadedData?: React.ReactEventHandler;
+    onLoadedMetadata?: React.ReactEventHandler;
+    onLoadStart?: React.ReactEventHandler;
+    onPause?: React.ReactEventHandler;
+    onPlay?: React.ReactEventHandler;
+    onPlaying?: React.ReactEventHandler;
+    onProgress?: React.ReactEventHandler;
+    onRateChange?: React.ReactEventHandler;
+    onSeeked?: React.ReactEventHandler;
+    onSeeking?: React.ReactEventHandler;
+    onStalled?: React.ReactEventHandler;
+    onSuspend?: React.ReactEventHandler;
+    onTimeUpdate?: React.ReactEventHandler;
+    onVolumeChange?: React.ReactEventHandler;
+    onWaiting?: React.ReactEventHandler;
+
+    // MouseEvents
+    onClick?: React.MouseEventHandler;
+    onContextMenu?: React.MouseEventHandler;
+    onDoubleClick?: React.MouseEventHandler;
+    onDrag?: React.DragEventHandler;
+    onDragEnd?: React.DragEventHandler;
+    onDragEnter?: React.DragEventHandler;
+    onDragExit?: React.DragEventHandler;
+    onDragLeave?: React.DragEventHandler;
+    onDragOver?: React.DragEventHandler;
+    onDragStart?: React.DragEventHandler;
+    onDrop?: React.DragEventHandler;
+    onMouseDown?: React.MouseEventHandler;
+    onMouseEnter?: React.MouseEventHandler;
+    onMouseLeave?: React.MouseEventHandler;
+    onMouseMove?: React.MouseEventHandler;
+    onMouseOut?: React.MouseEventHandler;
+    onMouseOver?: React.MouseEventHandler;
+    onMouseUp?: React.MouseEventHandler;
+
+    // Selection Events
+    onSelect?: React.ReactEventHandler;
+
+    // Touch Events
+    onTouchCancel?: React.TouchEventHandler;
+    onTouchEnd?: React.TouchEventHandler;
+    onTouchMove?: React.TouchEventHandler;
+    onTouchStart?: React.TouchEventHandler;
+
+    // UI Events
+    onScroll?: React.UIEventHandler;
+
+    // Wheel Events
+    onWheel?: React.WheelEventHandler;
+  }
+
+  interface HTMLAttributes extends DOMAttributes {
+    // React-specific Attributes
+    defaultChecked?: boolean;
+    defaultValue?: string | string[];
+
+    // Standard HTML Attributes
+    accept?: string;
+    acceptCharset?: string;
+    accessKey?: string;
+    action?: string;
+    allowFullScreen?: boolean;
+    allowTransparency?: boolean;
+    alt?: string;
+    async?: boolean;
+    autoComplete?: string;
+    autoFocus?: boolean;
+    autoPlay?: boolean;
+    capture?: boolean;
+    cellPadding?: number | string;
+    cellSpacing?: number | string;
+    charSet?: string;
+    challenge?: string;
+    checked?: boolean;
+    classID?: string;
+    className?: string;
+    cols?: number;
+    colSpan?: number;
+    content?: string;
+    contentEditable?: boolean;
+    contextMenu?: string;
+    controls?: boolean;
+    coords?: string;
+    crossOrigin?: string;
+    data?: string;
+    dateTime?: string;
+    default?: boolean;
+    defer?: boolean;
+    dir?: string;
+    disabled?: boolean;
+    download?: any;
+    draggable?: boolean;
+    encType?: string;
+    form?: string;
+    formAction?: string;
+    formEncType?: string;
+    formMethod?: string;
+    formNoValidate?: boolean;
+    formTarget?: string;
+    frameBorder?: number | string;
+    headers?: string;
+    height?: number | string;
+    hidden?: boolean;
+    high?: number;
+    href?: string;
+    hrefLang?: string;
+    htmlFor?: string;
+    httpEquiv?: string;
+    icon?: string;
+    id?: string;
+    inputMode?: string;
+    integrity?: string;
+    is?: string;
+    keyParams?: string;
+    keyType?: string;
+    kind?: string;
+    //label?: string;
+    lang?: string;
+    list?: string;
+    loop?: boolean;
+    low?: number;
+    manifest?: string;
+    marginHeight?: number;
+    marginWidth?: number;
+    max?: number | string;
+    maxLength?: number;
+    media?: string;
+    mediaGroup?: string;
+    method?: string;
+    min?: number | string;
+    minLength?: number;
+    multiple?: boolean;
+    muted?: boolean;
+    name?: string;
+    nonce?: string;
+    noValidate?: boolean;
+    open?: boolean;
+    optimum?: number;
+    pattern?: string;
+    placeholder?: string;
+    poster?: string;
+    preload?: string;
+    radioGroup?: string;
+    readOnly?: boolean;
+    rel?: string;
+    required?: boolean;
+    reversed?: boolean;
+    role?: string;
+    //rows?: number;
+    rowSpan?: number;
+    sandbox?: string;
+    scope?: string;
+    scoped?: boolean;
+    scrolling?: string;
+    seamless?: boolean;
+    selected?: boolean;
+    shape?: string;
+    //size?: number;
+    sizes?: string;
+    span?: number;
+    spellCheck?: boolean;
+    src?: string;
+    srcDoc?: string;
+    srcLang?: string;
+    srcSet?: string;
+    start?: number;
+    step?: number | string;
+    style?: React.CSSProperties;
+    summary?: string;
+    tabIndex?: number;
+    target?: string;
+    //title?: string;
+    type?: string;
+    useMap?: string;
+    //value?: string | string[];
+    width?: number | string;
+    wmode?: string;
+    wrap?: string;
+
+    // RDFa Attributes
+    about?: string;
+    datatype?: string;
+    inlist?: any;
+    prefix?: string;
+    property?: string;
+    resource?: string;
+    typeof?: string;
+    vocab?: string;
+
+    // Non-standard Attributes
+    autoCapitalize?: string;
+    autoCorrect?: string;
+    autoSave?: string;
+    color?: string;
+    itemProp?: string;
+    itemScope?: boolean;
+    itemType?: string;
+    itemID?: string;
+    itemRef?: string;
+    results?: number;
+    security?: string;
+    unselectable?: boolean;
+
+    // Allows aria- and data- Attributes
+    [key: string]: any;
+  }
 
 }
